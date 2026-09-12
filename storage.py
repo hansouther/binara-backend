@@ -15,13 +15,14 @@ storage_key = None
 
 
 def init_storage(force: bool = False):
-    global storage_key
-    if storage_key and not force:
-        return storage_key
-    resp = requests.post(f"{STORAGE_URL}/init", json={"emergent_key": EMERGENT_KEY}, timeout=30)
-    resp.raise_for_status()
-    storage_key = resp.json()["storage_key"]
-    return storage_key
+    pass
+    #global storage_key
+    #if storage_key and not force:
+    #    return storage_key
+    #resp = requests.post(f"{STORAGE_URL}/init", json={"emergent_key": EMERGENT_KEY}, timeout=30)
+    #resp.raise_for_status()
+    #storage_key = resp.json()["storage_key"]
+    #return storage_key
 
 
 def put_object(path: str, data: bytes, content_type: str) -> dict:

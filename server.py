@@ -376,7 +376,7 @@ async def on_startup():
     await seed_admin()
     await seed_content(db)
     try:
-        init_storage()
+        # init_storage()
         logger.info("Storage initialized")
     except Exception as e:
         logger.error(f"Storage init failed: {e}")
