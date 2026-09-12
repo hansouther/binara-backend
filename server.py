@@ -343,9 +343,9 @@ async def list_contacts(user: dict = Depends(require_auth)):
 app.include_router(api_router)
 
 origins = [
-            "http://localhost:3000",
-            "https://binaralab.netlify.app/"
-          ]
+    "http://localhost:3000",
+    "https://binaralab.netlify.app"
+]
     
 app.add_middleware(
     CORSMiddleware,
