@@ -344,7 +344,11 @@ app.include_router(api_router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    origins = [
+    "http://localhost:3000",
+    "https://binaralab.netlify.app/"
+    ]
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
