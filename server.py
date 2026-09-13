@@ -391,10 +391,10 @@ async def on_startup():
     except Exception as e:
         logger.error(f"Storage init failed: {e}")
 
-if __name__ == "__main__":
+#f __name__ == "__main__":
     # Mengambil port dari Railway, atau gunakan 8080 jika di komputer lokal
-    port = int(os.environ.get("PORT", 8080))
-    uvicorn.run("server:app", host="0.0.0.0", port=port)
+    # port = int(os.environ.get("PORT", 8080))
+    # uvicorn.run("server:app", host="0.0.0.0", port=port)
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
