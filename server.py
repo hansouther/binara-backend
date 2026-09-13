@@ -12,6 +12,7 @@ from datetime import datetime, timezone, timedelta
 from typing import List, Optional
 
 from fastapi import FastAPI, APIRouter, HTTPException, Depends, UploadFile, File, Request, Response
+from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field, EmailStr, ConfigDict
@@ -344,7 +345,9 @@ app.include_router(api_router)
 
 origins = [
     "http://localhost:3000",
-    "https://binaralab.netlify.app"
+    "https://binaralab.netlify.app",
+    "https://binara.site",
+    "https://www.binara.site"
 ]
     
 app.add_middleware(
